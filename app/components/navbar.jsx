@@ -1,52 +1,44 @@
-import { useEffect } from "react";
-import $ from "jquery";
+"use client"
+
+import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Nav() {
-
-    useEffect(() => {
-        $(document).ready(() => {
-            $("#toggleButton").click(() => {
-                $("#nav-links").toggle(200);
-            })
-        });
-    }, []);
+    const [open, setOpen] = useState(false);
 
     return (
-        <>
-            <nav className="flex items-center justify-between flex-wrap p-6">
-                <div className="flex items-center flex-shrink-0 text-gray-800 mr-6">
-                    <Link href={"/"}>
-                        <h5 className="logo">Learning Impact Zambia (LIZ)</h5>
-                    </Link>
-                </div>
+        <nav className="flex items-center justify-between bg-white" role="navigation" aria-label="Main navigation">
+            <div className="flex items-center gap-3">
+                <Link href="/" className="flex items-center gap-3">
+                    <Image src="/images/favicon-logo.png" alt="Learning Impact Zambia" width={40} height={10} className="logo-img" />
+                </Link>
+            </div>
 
-                <div className="block lg:hidden">
-                    <button className="flex items-center px-3 py-2 border rounded text-gray-800 border-gray-800 hover:text-gray-600 hover:border-white" id="toggleButton">
-                    <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-                    </button>
-                </div>
+            <button
+                className="xl:hidden p-2 rounded-md border border-transparent hover:border-gray-200"
+                aria-controls="primary-navigation"
+                aria-expanded={open}
+                onClick={() => setOpen((s) => !s)}
+                aria-label="Toggle navigation"
+            >
+                <svg className="h-6 w-6 text-gray-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 6h18M3 12h18M3 18h18" />
+                </svg>
+            </button>
 
-                <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto nav-links" id="nav-links">
-                    <div className="text-sm lg:flex-grow">
-                        <ul>
-                            <Link href={"/"} className="block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-gray-600 mr-4">
-                            Home
-                            </Link>
-                            <Link href={"#our-mission"} className="block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-gray-600 mr-4">
-                                Our Mission
-                            </Link>
-                            <Link href={"#our-vision"} className="block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-gray-600">
-                                Our Vision
-                            </Link>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <Link href={"#about-us"} className="inline-block text-sm px-4 py-2 leading-none border rounded text-gray-800 border-gray-600 hover:border-transparent hover:text-gray-100 hover:bg-gray-600 transition mt-4 lg:mt-0">About Us</Link>
-                    </div>
-                </div>
-            </nav>
-        </>
-    )
+            <div id="primary-navigation" className={`${open ? "block" : "hidden"} w-full xl:flex xl:items-center xl:w-auto`}>
+                <ul className="xl:flex xl:gap-6 text-sm xl:items-center"> 
+                    <li>
+                        <Link href="/" className="block py-2 xl:py-0 text-gray-700 hover:text-gray-900">Home</Link>
+                    </li>
+                    <li><Link href="#our-mission" className="block py-2 xl:py-0 text-gray-700 hover:text-gray-900">Our Mission</Link></li>
+                    <li><Link href="#our-vision" className="block py-2 xl:py-0 text-gray-700 hover:text-gray-900">Our Vision</Link></li>
+                    <li>
+                        <Link href="/contact-us" className="inline-block btn border border-gray-400 mt-2 xl:mt-0 hover:text-white transition-all hover:bg-gray-900">Contact Us</Link>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    );
 }
