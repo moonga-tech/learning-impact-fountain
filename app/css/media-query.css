@@ -1,8 +1,9 @@
-@media screen and (max-width: 1023px) {
-    .nav-links {
+@media screen and (max-width: 1278px) {
+    .window-view {
         display: none;
     }
 }
+
 @media screen and (max-width: 1000px) {
     .mission-vision, .our-mission {
         flex-wrap: wrap;
