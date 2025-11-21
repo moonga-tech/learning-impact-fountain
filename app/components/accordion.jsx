@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-import { Icon } from './icon'; // Assuming you have an Icon component
+import Icon from './icon'; // Assuming you have an Icon component
 
 const AccordionItem = ({ title, children, isOpen, onClick }) => {
   return (

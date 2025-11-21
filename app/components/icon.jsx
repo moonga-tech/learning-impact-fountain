@@ -1,3 +1,5 @@
+"use client"
+
 export default function Icon({ name, className = "inline-block" }) {
     const map = {
         target: "fa-solid fa-bullseye",

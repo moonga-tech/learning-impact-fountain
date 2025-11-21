@@ -5,7 +5,7 @@ import { TypingAnimation } from "@/components/ui/typing-animation";
 import Swal from "sweetalert2"
 
 import Accordion from "./accordion";
-import { Icon } from "./icon";
+import Icon from "./icon";
 
 /* images */
 import MissionImage from "../../public/images/mission.jpg"
