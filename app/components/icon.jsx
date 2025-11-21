@@ -1,4 +1,4 @@
-export function Icon({ name, className = "inline-block" }) {
+export default function Icon({ name, className = "inline-block" }) {
     const map = {
         target: "fa-solid fa-bullseye",
         vision: "fa-solid fa-eye",
