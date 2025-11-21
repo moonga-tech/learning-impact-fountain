@@ -1,0 +1,27 @@
+@import "tw-animate-css";
+@import "tailwindcss";
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+    @apply transition-colors duration-200 ease-in-out;
+    cursor: pointer;
+}
+.btn-small {
+    padding: .5rem 1rem;
+}
+.btn-md {
+    padding: .6rem 2rem;
+}
+.btn-lg {   
+    padding: .75rem 3rem;
+}
+.btn-primary { 
+    background: var(--accent); 
+    color: #071025; 
+}
+.btn-ghost { 
+  background: transparent; 
+  border: 1px solid rgba(15,23,42,0.06); 
+}

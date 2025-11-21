@@ -1,4 +1,5 @@
 import Nav from "../components/navbar";
+import Footer from "../components/footer";
 
 export default function Page() 
 {
@@ -11,10 +12,11 @@ export default function Page()
                 <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-md">
                     <h2 className="text-2xl font-semibold text-gray-800 mb-4">Get in Touch</h2>
                     <p className="text-gray-600 mb-2">Phone: <a href="tel:+260978847195" className="text-blue-600 hover:underline">+260 97 884 7195</a></p>
-                    <p className="text-gray-600 mb-4">Email: <a href="mailto:lizlearn9@gmail" className="text-blue-600 hover:underline">lizlearn9@gmail</a></p>
+                    <p className="text-gray-600 mb-4">Email: <a href="mailto:info@learninglmpactfoundation.org" className="text-blue-600 hover:underline">info@learninglmpactfoundation.org</a></p>
                     <p className="text-gray-600">Address: Lusaka, Zambia</p>
                 </div>
             </div>
+            <Footer />
         </>
     )
 } 

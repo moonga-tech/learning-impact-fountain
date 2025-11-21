@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <footer className="bg-gray-800">
-            <div className="footer-content flex flex-col md:flex-row justify-between items-start md:items-center px-6 py-10 gap-8">
+            <div className="footer-content flex flex-col md:flex-row justify-between items-start md:items-center px-6 py-6 gap-8">
                 <div>
                     <h1 className="font-semibold text-2xl">Contact Us</h1>
                     <div className="text-md">
@@ -34,13 +34,13 @@ export default function Footer() {
                 </div>
                 <div>
                     <h1 className="font-semibold text-2xl">Address</h1>
-                    <p className="text-md mb-10">
+                    <p className="text-md">
                         📍 Lusaka, Zambia
                     </p>
                     <small>Google Map integration soon!</small>
                 </div>
             </div>
-            <div className="text-center py-4">
+            <div className="text-center py-2">
                 <small>© 2025 Learning Impact Foundation. Designed & Developed by Manongo Tech</small>
             </div>
         </footer>

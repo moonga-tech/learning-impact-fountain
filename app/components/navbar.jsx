@@ -36,7 +36,7 @@ export default function Nav() {
                         <li><Link href="#our-mission" className="block py-2 xl:py-0 text-gray-700 hover:text-gray-900">Our Mission</Link></li>
                         <li><Link href="#our-vision" className="block py-2 xl:py-0 text-gray-700 hover:text-gray-900">Our Vision</Link></li>
                         <li>
-                            <Link href="/contact-us" className="inline-block btn border border-gray-400 mt-2 xl:mt-0 hover:text-white transition-all hover:bg-gray-900">Contact Us</Link>
+                            <Link href="/contact-us" className="btn                border border-gray-400 btn-md hover:text-white transition-all hover:bg-gray-900">Contact Us</Link>
                         </li>
                     </ul>
                 </div>
@@ -51,7 +51,7 @@ export default function Nav() {
                         <li><Link href="#our-mission" className="block py-2 xl:py-0">Our Mission</Link></li>
                         <li><Link href="#our-vision" className="block py-2 xl:py-0 ">Our Vision</Link></li>
                         <li>
-                            <Link href="/contact-us" className="inline-block btn border border-gray-400 mt-2 xl:mt-0 hover:text-white transition-all hover:bg-gray-900">Contact Us</Link>
+                            <Link href="/contact-us" className="inline-block btn btn-md border border-gray-400 hover:text-white transition-all hover:bg-gray-900 hover:border-gray-900">Contact Us</Link>
                         </li>
                     </ul>
                 </div>
