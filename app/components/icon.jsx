@@ -1,11 +1,9 @@
-export function Icon({ name, className = "inline-block" }) {
+export default function Icon({ name, className = "inline-block" }) {
     const map = {
         target: "fa-solid fa-bullseye",
         vision: "fa-solid fa-eye",
-        
         check: "fa-solid fa-circle-check",
         arrow: "fa-solid fa-arrow-right",
-
         plus: "fa-solid fa-plus",
         minus: "fa-solid fa-minus",
     };
